@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::view('/welcome','welcome'); 
+
+Route::redirect('/', '/home');
+
+Route::match(['get','post'],'/home', function () {
+    return '<h1>halaman utama</h1>';
+});
+
+Route::get('user/{id}', function ($id){
+    return 'User '.$id;
+});
