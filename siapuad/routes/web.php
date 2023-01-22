@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
@@ -28,3 +28,10 @@ Route::match(['get','post'],'/home', function () {
 Route::get('user/{id}', function ($id){
     return 'User '.$id;
 });
+
+*/
+
+
+Route::get('/', function() {
+return view('index');
+    });
